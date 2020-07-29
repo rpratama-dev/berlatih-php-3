@@ -5,16 +5,11 @@ function tentukan_deret_geometri($arr) {
 	$a = $arr[0];
 	$b = $arr[1];
 	$rasio = $b / $a;
-	$temp = 1;
-	echo $rasio."<br>";
-	for($i=0;$i<$n;$i++){
-		if (($arr[$i])==$arr[$i-1]){
-			$temp = $arr[$i];
-		}else{
-			return "false<br>";
-		}
+	$un = $a * pow($rasio, $n-1); 
+	if($un == $arr[$n-1]){
+		return "true <br>";  
 	}
-	return "true<br>";
+	return "false<br>";
 	
 }
 //TEST CASES
